@@ -7,13 +7,13 @@ services:
     ports:
       - 8080:8080
     environment:
-      KEYCLOAK_USER: admin 
-      KEYCLOAK_PASSWORD: 5C5is3hQb8Ri 
+      KEYCLOAK_USER: ${KEYCLOAK_ADMIN} 
+      KEYCLOAK_PASSWORD: ${KEYCLOAK_PASSWORD} 
       DB_VENDOR: postgres 
-      DB_ADDR: 13.229.215.113 
-      DB_USER: postgres 
-      DB_PASSWORD: 4rpDtHIGBIblkLyYEyng 
-      DB_DATABASE: keycloak 
+      DB_ADDR: ${DB_HOST} 
+      DB_USER: ${DB_USER} 
+      DB_PASSWORD: ${DB_PASSWORD} 
+      DB_DATABASE: ${DB_NAME}
       PROXY_ADDRESS_FORWARDING: 'true'
     volumes:
       - ./messages_en.properties:/opt/jboss/keycloak/themes/base/email/messages/messages_en.properties
