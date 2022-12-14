@@ -14,6 +14,8 @@ services:
       DB_USER: postgres 
       DB_PASSWORD: 4rpDtHIGBIblkLyYEyng 
       DB_DATABASE: keycloak 
-      PROXY_ADDRESS_FORWARDING: true
+      PROXY_ADDRESS_FORWARDING: 'true'
     volumes:
       - ./messages_en.properties:/opt/jboss/keycloak/themes/base/email/messages/messages_en.properties
+      - ./executeActions.ftl:/opt/jboss/keycloak/themes/base/email/html/executeActions.ftl
+      - ./password-reset.ftl:/opt/jboss/keycloak/themes/base/email/html/password-reset.ftl
