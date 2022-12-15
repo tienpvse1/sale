@@ -3,14 +3,14 @@
   <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Salesnetwork.info | Verification</title>
+    <title>Salesnetwork.info | Reset Password</title>
   </head>
   <body
     style="
       background-image: linear-gradient(#323345 1px, transparent 1px),
-        linear-gradient(to right, #323345 1px, #1d1d42 1px);
+        linear-gradient(to right, #323345 1px, #1D1D42 1px);
       background-size: 40px 40px;
-      background-color: #161f33;
+      background-color: #161F33;
       font-family: sans-serif;
       -webkit-font-smoothing: antialiased;
       font-size: 14px;
@@ -22,6 +22,6 @@
       color: white;
     "
   >
-   ${kcSanitize(msg("passwordResetBodyHtml",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
+    ${kcSanitize(msg("passwordResetBodyHtml",link, linkExpiration, realmName, linkExpirationFormatter(linkExpiration)))?no_esc}
   </body>
 </html>
